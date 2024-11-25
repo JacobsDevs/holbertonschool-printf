@@ -13,7 +13,7 @@
 int (*get_specifier(char s))(va_list *ap)
 {
 	specifier_t specifier[] = {
-		{"c", print_char},
+    {"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{NULL, NULL}

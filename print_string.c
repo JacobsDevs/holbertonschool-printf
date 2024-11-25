@@ -6,7 +6,7 @@
  * @ap: A va_list passed to the function.
  *
  * Return: The length of the string.
- */ 
+ */
 
 int print_string(va_list ap)
 {

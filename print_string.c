@@ -25,3 +25,4 @@ int print_string(va_list ap)
 		i++;
 	}
 	return (i);
+}

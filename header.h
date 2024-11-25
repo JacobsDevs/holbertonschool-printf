@@ -12,17 +12,17 @@
 
 typedef struct specifiers
 {
-	char spec;
-	int (*func)(va_list *ap);
+	char *spec;
+	int (*func)(va_list ap);
 } specifier_t;
 
 
 int _printf(const char *format, ...);
-int (*get_specifier(char s))(va_list *ap);
+int (*get_specifier(char s))(va_list ap);
 int _putchar(char c);
-int print_char(va_list *ap);
-int print_string(va_list *ap);
-int print_percent(va_list *ap);
-int print_unknown(va_list *ap);
+int print_char(va_list ap);
+int print_string(va_list ap);
+int print_percent(va_list ap);
+int print_unknown(va_list ap);
 
 #endif

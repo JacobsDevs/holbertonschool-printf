@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
-#include "header.h"
+#include "main.h"
 
 /**
  * get_specifier_func - Returns a function pointer to the approporiate

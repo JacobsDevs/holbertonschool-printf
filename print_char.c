@@ -8,8 +8,8 @@
  * Return: The length of the printed char (should be 1)
  */
 
-int print_char(va_list *ap)
+int print_char(va_list ap)
 {
-	_putchar(va_arg(*ap, int));
+	_putchar(va_arg(ap, int));
 	return (1);
 }

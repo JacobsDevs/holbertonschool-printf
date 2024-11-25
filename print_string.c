@@ -3,7 +3,7 @@
 /**
  * print_string - Prints a string from va_list
  *
- * @ap: A pointer to the va_list passed to the function.
+ * @ap: A va_list passed to the function.
  *
  * Return: The length of the string.
  */ 

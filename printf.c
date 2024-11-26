@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * _printf - Custom implementation of printf function.
+ * _printf - Custom implementation of printf function
  * @format: String containing text and specifiers.
  *
  * Return: Number of characters printed, or -1 on error.
@@ -26,11 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (format[i + 1] == '\0')
-			{
-				_putchar('%');
-				len += 1;
-				break;
-			}
+				return (-1);
 			func = get_specifier(format[i + 1]);
 			if (func == NULL)
 			{
@@ -39,9 +35,7 @@ int _printf(const char *format, ...)
 				len += 2;
 			}
 			else
-			{
 				len += func(ap);
-			}
 			i++;
 		}
 		i++;

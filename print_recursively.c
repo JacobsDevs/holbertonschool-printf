@@ -8,7 +8,7 @@
  * Return: The length of the digit.
  */
 
-int print_int_recursively(int num)
+int print_int_recursively(long int num)
 {
 	int len = 0;
 

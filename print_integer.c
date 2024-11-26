@@ -9,7 +9,7 @@
 
 int print_integer(va_list ap)
 {
-	int num = va_arg(ap, int);
+	long int num = va_arg(ap, long int);
 	int length = 0;
 
 	if (num < 0)

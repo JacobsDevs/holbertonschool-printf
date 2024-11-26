@@ -25,6 +25,6 @@ int print_string(va_list ap);
 int print_percent(va_list ap);
 int print_unknown(va_list ap);
 int print_integer(va_list ap);
-int print_int_recursively(int n);
+int print_int_recursively(long int n);
 
 #endif

@@ -20,9 +20,7 @@ int print_int_recursively(int num)
 	if (num / 10 > 0)
 	{
 		len += print_int_recursively(num / 10);
-	
 	}
 		_putchar((num % 10) + '0');
 		return (len);
 }
-

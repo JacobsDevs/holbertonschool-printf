@@ -10,17 +10,14 @@
 
 int print_int_recursively(int num)
 {
-	int len = 1;
+	int len = 0;
 
-	if (num / 10 == 0)
-	{
-		_putchar(num + '0');
-		return (1);
-	}
-	if (num / 10 > 0)
+	if (num / 10 != 0)
 	{
 		len += print_int_recursively(num / 10);
 	}
-		_putchar((num % 10) + '0');
-		return (len);
+	_putchar((num % 10) + '0');
+	len++;
+
+	return (len);
 }

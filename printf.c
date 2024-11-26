@@ -35,7 +35,9 @@ int _printf(const char *format, ...)
 				len += 2;
 			}
 			else
+			{
 				len += func(ap);
+			}
 			i++;
 		}
 		i++;

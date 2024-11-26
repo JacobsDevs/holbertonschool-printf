@@ -16,6 +16,8 @@ int (*get_specifier(char s))(va_list ap)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"i", print_integer},
+		{"d", print_integer},
 		{NULL, NULL}
 	};
 	int i = 0;

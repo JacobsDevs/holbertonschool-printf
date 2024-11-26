@@ -20,5 +20,5 @@ int print_integer(va_list ap)
 	}
 	length += print_int_recursively(num);
 
-	return (length);
+	return (length - 1);
 }

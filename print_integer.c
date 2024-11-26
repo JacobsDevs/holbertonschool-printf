@@ -10,7 +10,15 @@
 int print_integer(va_list ap)
 {
 	int num = va_arg(ap, int);
-	int length = print_int_recursively(num);
+	int length = 0; 
+	
+	if (num < 0)
+	{
+		_putchar('-');
+		length++;
+	}
+	
+	length += print_int_recursively(num);
 
 	return (length);
 }

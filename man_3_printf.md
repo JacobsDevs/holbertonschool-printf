@@ -38,7 +38,7 @@ The definition for the conversion specifiers are:
 - If the integer is positive, the digits are printed directly.
   
 # Return Value
-On succuss, the functions return the number of bytes printed
+On success, the functions return the number of bytes printed
 (excluding the null terminator of a string).
 Returns -1 if an error is encountered.
 

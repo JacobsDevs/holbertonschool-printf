@@ -31,9 +31,12 @@ The definition for the conversion specifiers are:
 %%      Prints a % sign. No argument is convertered.
 
 %d, %i  Retrieves an integer value and depending on the value of the integer, they are handled differently:
-                - If the integer is INT\_MIN, it prints a '-' and converts to an unsigned equivalent.
-                - If the integer is negative (but not INT_MIN), the '-' is negated and a positive integer is printed.
-                - If the integer is positive, the digits are printed directly.
+- If the integer is INT\_MIN, it prints a '-' and converts to an unsigned equivalent.
+  
+- If the integer is negative (but not INT_MIN), the '-' is negated and a positive integer is printed.
+  
+- If the integer is positive, the digits are printed directly.
+  
 # Return Value
 On succuss, the functions return the number of bytes printed
 (excluding the null terminator of a string).

@@ -3,7 +3,7 @@
 
 # Synopsis
   #include "main.h"
-  int\_printf(const char *format, ...);
+  int \_printf(const char *format, ...);
 
 # Description
   The function \_printf outputs to the stdout based on what is in the format string.

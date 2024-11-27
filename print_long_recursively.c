@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_int_recursively - Recursively print digit by digit.
+ * print_unsigned_recursively - Recursively print digit by digit.
  *
  * @num: Number to print recursively.
  *

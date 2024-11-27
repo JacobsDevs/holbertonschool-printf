@@ -8,17 +8,17 @@
  * Return: The length of the binary number.
  */
 
-int print_binary(va_list ap)
+int print_binary(va_list ap, local_buffer *buffer)
 {
 	unsigned int num = va_arg(ap, unsigned int);
 	int len = 0;
 
 	if (num == 0)
 	{
-		_putchar(num + '0');
+		_putchar(num + '0', buffer);
 		return (1);
 	}
-		len += print_binary_recursively(num);
+		len += print_binary_recursively(num, buffer);
 
 	return (len);
 }
@@ -32,15 +32,15 @@ int print_binary(va_list ap)
  * Return: The length of the binary number.
  */
 
-int print_binary_recursively(unsigned int num)
+int print_binary_recursively(unsigned int num, local_buffer *buffer)
 {
 	int len = 0;
 
 	if (num / 2 != 0)
 	{
-		len += print_binary_recursively(num / 2);
+		len += print_binary_recursively(num / 2, buffer);
 	}
-	_putchar((num % 2) + '0');
+	_putchar((num % 2) + '0', buffer);
 	len++;
 
 	return (len);

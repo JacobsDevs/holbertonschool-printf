@@ -44,11 +44,11 @@ Returns -1 if an error is encountered.
 
 # Examples
 ### Printing a String:
-
+```
   _printf("Hello, %s!\n", "world");
   
   Output : "Hello, world!"
-
+```
 ### Printing a Character:
 
   _printf("Character: %c\n", 'A');

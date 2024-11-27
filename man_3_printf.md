@@ -25,8 +25,11 @@ The conversion specifiers are characters printed after the % sign. They define t
 The definition for the conversion specifiers are:
 
 %c      Prints a single character using putchar.
+
 %s      Characters from the array are printed up to but not inclusing the null terminator.
+
 %%      Prints a % sign. No argument is convertered.
+
 %d, %i  Retrieves an integer value and depending on the value of the integer, they are handled differently:
                 - If the integer is INT\_MIN, it prints a '-' and converts to an unsigned equivalent.
                 - If the integer is negative (but not INT_MIN), the '-' is negated and a positive integer is printed.

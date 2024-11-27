@@ -18,6 +18,7 @@ int (*get_specifier(char s))(va_list ap, local_buffer * buffer)
 		{"%", print_percent},
 		{"i", print_integer},
 		{"d", print_integer},
+		{"b", print_binary},
 		{NULL, NULL}
 	};
 	int i = 0;

@@ -43,5 +43,7 @@ int print_int_recursively(int n, local_buffer *);
 int print_unsigned_recursively(unsigned int num, local_buffer *);
 void clean_up_buffer(local_buffer *, int len);
 local_buffer *setup_buffer(void);
+int print_binary(va_list ap);
+int print_binary_recursively(unsigned int num);
 
 #endif

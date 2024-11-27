@@ -45,28 +45,28 @@ Returns -1 if an error is encountered.
 # Examples
 ### Printing a String:
 
-_printf("Hello, %s!\n", "world");
-
-Output : "Hello, world!"
+  _printf("Hello, %s!\n", "world");
+  
+  Output : "Hello, world!"
 
 ### Printing a Character:
 
-_printf("Character: %c\n", 'A');
-
-Output: "Character: A"
+  _printf("Character: %c\n", 'A');
+  
+  Output: "Character: A"
 
 ### Printing Integers:
 
-_printf("Value: %i\n", 456);
+  _printf("Value: %i\n", 456);
+  
+  _printf("Value: %i\n", -321);
 
-_printf("Value: %i\n", -321);
-
-Output: "Value: 456
-         Value: -321"
+  Output: "Value: 456
+           Value: -321"
 
 ### Printing a Percent Sign:
 
-_printf("Percent sign: %%\n");
-
-Output: "Percent sign: %"  
+  _printf("Percent sign: %%\n");
+  
+  Output: "Percent sign: %"  
 

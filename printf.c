@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <unistd.h>
 /**
  * _printf - Custom implementation of printf function
  * @format: String containing text and specifiers.
@@ -10,8 +11,9 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int len = 0;
-	int (*func)(va_list);
+	int (*func)(va_list, local_buffer *);
 	va_list ap;
+	local_buffer *l_buffer = setup_buffer();
 
 	if (format == NULL)
 		return (-1);
@@ -20,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
+			_putchar(format[i], l_buffer);
 			len += 1;
 		}
 		else
@@ -30,18 +32,47 @@ int _printf(const char *format, ...)
 			func = get_specifier(format[i + 1]);
 			if (func == NULL)
 			{
-				_putchar('%');
-				_putchar(format[i + 1]);
+				_putchar('%', l_buffer);
+				_putchar(format[i + 1], l_buffer);
 				len += 2;
 			}
 			else
 			{
-				len += func(ap);
+				len += func(ap, l_buffer);
 			}
 			i++;
 		}
 		i++;
 	}
+	clean_up_buffer(l_buffer, len);
 	va_end(ap);
 	return (len);
 }
+
+/**
+* setup_buffer - setup buffer an malloc the struct & buffer
+*
+* Return: Pointer to the buffer
+*/
+
+local_buffer *setup_buffer(void)
+{
+	local_buffer *l_buffer = (local_buffer *)malloc(sizeof(local_buffer));
+
+	l_buffer->buffer = malloc(sizeof(char) * 1024);
+	return (l_buffer);
+}
+
+/**
+* clean_up_buffer - frees used space and writes buffer contents to stdout
+* @l_buffer: pointer to the buffer
+* @len: Length of the buffer
+*/
+void clean_up_buffer(local_buffer *l_buffer, int len)
+{
+	l_buffer->buffer[l_buffer->next_empty_index] = '\0';
+	write(1, l_buffer->buffer, len);
+	free(l_buffer->buffer);
+	free(l_buffer);
+}
+

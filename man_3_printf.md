@@ -4,7 +4,7 @@
 # Synopsis
 ```
   #include "main.h"
-  
+
   int _printf(const char *format, ...);
 ```
 # Description
@@ -33,11 +33,11 @@ The definition for the conversion specifiers are:
 
 %d, %i  Retrieves an integer value and depending on the value of the integer, they are handled differently:
 - If the integer is INT\_MIN, it prints a '-' and converts to an unsigned equivalent.
-  
+
 - If the integer is negative (but not INT_MIN), the '-' is negated and a positive integer is printed.
-  
+
 - If the integer is positive, the digits are printed directly.
-  
+
 # Return Value
 On success, the functions return the number of bytes printed
 (excluding the null terminator of a string).
@@ -47,19 +47,19 @@ Returns -1 if an error is encountered.
 ### Printing a String:
 ```
   _printf("Hello, %s!\n", "world");
-  
+
   Output : "Hello, world!"
 ```
 ### Printing a Character:
 ```
   _printf("Character: %c\n", 'A');
-  
+
   Output: "Character: A"
 ```
 ### Printing Integers:
 ```
   _printf("Value: %i\n", 456);
-  
+
   _printf("Value: %i\n", -321);
 
   Output: "Value: 456
@@ -68,6 +68,6 @@ Returns -1 if an error is encountered.
 ### Printing a Percent Sign:
 ```
   _printf("Percent sign: %%\n");
-  
-  Output: "Percent sign: %"  
+
+  Output: "Percent sign: %"
 ```

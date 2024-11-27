@@ -50,23 +50,23 @@ Returns -1 if an error is encountered.
   Output : "Hello, world!"
 ```
 ### Printing a Character:
-
+```
   _printf("Character: %c\n", 'A');
   
   Output: "Character: A"
-
+```
 ### Printing Integers:
-
+```
   _printf("Value: %i\n", 456);
   
   _printf("Value: %i\n", -321);
 
   Output: "Value: 456
            Value: -321"
-
+```
 ### Printing a Percent Sign:
-
+```
   _printf("Percent sign: %%\n");
   
   Output: "Percent sign: %"  
-
+```

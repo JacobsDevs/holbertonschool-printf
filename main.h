@@ -45,5 +45,7 @@ void clean_up_buffer(local_buffer *, int len);
 local_buffer *setup_buffer(void);
 int print_binary(va_list ap, local_buffer *);
 int print_binary_recursively(unsigned int num, local_buffer *);
+int print_custom_string(va_list ap, local_buffer *);
+
 
 #endif

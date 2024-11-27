@@ -19,6 +19,7 @@ int (*get_specifier(char s))(va_list ap, local_buffer * buffer)
 		{"i", print_integer},
 		{"d", print_integer},
 		{"b", print_binary},
+		{"S", print_custom_string},
 		{NULL, NULL}
 	};
 	int i = 0;

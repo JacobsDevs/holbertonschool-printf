@@ -12,6 +12,6 @@ int _putchar(char c, local_buffer *buffer)
 {
 	buffer->buffer[buffer->next_empty_index] = c;
 	buffer->next_empty_index++;
-  return (0);
+	return (1);
 	/*return (write(1, &c, 1));*/
 }

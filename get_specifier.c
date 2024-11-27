@@ -10,7 +10,7 @@
  * Return: A Pointer to the function to use to print
  */
 
-int (*get_specifier(char s))(va_list ap)
+int (*get_specifier(char s))(va_list ap, local_buffer * buffer)
 {
 	specifier_t specifier[] = {
 		{"c", print_char},

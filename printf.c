@@ -58,8 +58,9 @@ int _printf(const char *format, ...)
 local_buffer *setup_buffer(void)
 {
 	local_buffer *l_buffer = (local_buffer *)malloc(sizeof(local_buffer));
-	l_buffer->buffer = malloc(sizeof(char) * 1024);
 
+	if (l_buffer != NULL)
+		l_buffer->buffer = malloc(sizeof(char) * 1024);
 	return (l_buffer);
 }
 

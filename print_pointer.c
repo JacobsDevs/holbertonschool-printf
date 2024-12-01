@@ -12,10 +12,15 @@ int print_pointer(va_list ap, local_buffer *buffer)
 {
 	int len = 0;
 	unsigned long addr = va_arg(ap, unsigned long);
-
-	len += _putchar('0', buffer);
-	len += _putchar('x', buffer);
-	len += print_ul_hexlower_rec(addr, buffer);
+	
+	if (addr < 1)
+		len += _printf("%s", "(nil)");
+	else
+	{
+		len += _putchar('0', buffer);
+		len += _putchar('x', buffer);
+		len += print_ul_hexlower_rec(addr, buffer);
+	}
 	return (len);
 }
 

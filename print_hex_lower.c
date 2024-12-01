@@ -37,11 +37,12 @@ int print_hex_lower(va_list ap, local_buffer *buffer)
 int print_hexlower_rec(unsigned int num, local_buffer *buffer)
 {
 	int len = 0;
+	unsigned int remainder;
 
 	if (num / 16 != 0)
 		len += print_hexlower_rec(num / 16, buffer);
 
-	unsigned int remainder = num % 16;
+	remainder = num % 16;
 
 	if (remainder < 10)
 		_putchar(remainder + '0', buffer);

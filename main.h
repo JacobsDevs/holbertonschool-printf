@@ -46,6 +46,8 @@ local_buffer *setup_buffer(void);
 int print_binary(va_list ap, local_buffer *);
 int print_binary_recursively(unsigned int num, local_buffer *);
 int print_custom_string(va_list ap, local_buffer *);
-
-
+int print_unsignd(va_list ap, local_buffer *);
+int print_unsignd_recursively(unsigned int num, local_buffer *buffer);
+int print_octal(va_list ap, local_buffer *);
+int print_octal_recursively(unsigned int num, local_buffer *buffer);
 #endif

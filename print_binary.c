@@ -4,6 +4,7 @@
  * print_binary - Prints a binary number recursively.
  *
  * @ap: va_list passed into the function.
+ * @buffer: Pointer to the buffer for _putchar.
  *
  * Return: The length of the binary number.
  */
@@ -28,6 +29,7 @@ int print_binary(va_list ap, local_buffer *buffer)
  *                            print a number in binary.
  *
  * @num: Input integer to print in binary.
+ * @buffer: Pointer to the buffer for _putchar.
  *
  * Return: The length of the binary number.
  */

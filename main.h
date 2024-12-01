@@ -50,5 +50,9 @@ int print_hex_upper(va_list ap, local_buffer *);
 int print_hexupper_rec(unsigned int num, local_buffer *buffer);
 int print_hexlower_rec(unsigned int num, local_buffer *buffer);
 int print_hex_lower(va_list ap, local_buffer *buffer);
+int print_unsignd(va_list ap, local_buffer *);
+int print_unsignd_recursively(unsigned int num, local_buffer *buffer);
+int print_octal(va_list ap, local_buffer *);
+int print_octal_recursively(unsigned int num, local_buffer *buffer);
 
 #endif

@@ -22,6 +22,9 @@ int (*get_specifier(char s))(va_list ap, local_buffer * buffer)
 		{"S", print_custom_string},
 		{"x", print_hex_lower},
 		{"X", print_hex_upper},
+		{"u", print_unsignd},
+		{"o", print_octal},
+
 		{NULL, NULL}
 	};
 	int i = 0;

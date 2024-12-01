@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	local_buffer *l_buffer = setup_buffer();
 
-	if (format == NULL)
+	if (l_buffer == NULL || l_buffer->buffer == NULL || format == NULL)
 		return (-1);
 	va_start(ap, format);
 	while (format[i] != '\0')
@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	clean_up_buffer(l_buffer, len);
+	clean_up_buffer(l_buffer, l_buffer->next_empty_index);
 	va_end(ap);
 	return (len);
 }
@@ -59,7 +59,8 @@ local_buffer *setup_buffer(void)
 {
 	local_buffer *l_buffer = (local_buffer *)malloc(sizeof(local_buffer));
 
-	l_buffer->buffer = malloc(sizeof(char) * 1024);
+	if (l_buffer != NULL)
+		l_buffer->buffer = malloc(sizeof(char) * 1024);
 	return (l_buffer);
 }
 
@@ -70,7 +71,6 @@ local_buffer *setup_buffer(void)
 */
 void clean_up_buffer(local_buffer *l_buffer, int len)
 {
-	l_buffer->buffer[l_buffer->next_empty_index] = '\0';
 	write(1, l_buffer->buffer, len);
 	free(l_buffer->buffer);
 	free(l_buffer);

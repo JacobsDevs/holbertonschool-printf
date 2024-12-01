@@ -37,13 +37,14 @@ int print_hex_upper(va_list ap, local_buffer *buffer)
 int print_hexupper_rec(unsigned int num, local_buffer *buffer)
 {
 	int len = 0;
+	unsigned int remainder;
 
 	if (num / 16 != 0)
 	{
 		len += print_hexupper_rec(num / 16, buffer);
 	}
 
-	unsigned int remainder = num % 16;
+	remainder = num % 16;
 
 	if (remainder < 10)
 	{

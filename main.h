@@ -46,6 +46,8 @@ local_buffer *setup_buffer(void);
 int print_binary(va_list ap, local_buffer *);
 int print_binary_recursively(unsigned int num, local_buffer *);
 int print_custom_string(va_list ap, local_buffer *);
+int print_pointer(va_list ap, local_buffer *buffer);
+int print_ul_hexlower_rec(unsigned long num, local_buffer *buffer);
 int print_hex_upper(va_list ap, local_buffer *);
 int print_hexupper_rec(unsigned int num, local_buffer *buffer);
 int print_hexlower_rec(unsigned int num, local_buffer *buffer);

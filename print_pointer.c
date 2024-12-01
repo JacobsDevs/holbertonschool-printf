@@ -13,7 +13,7 @@ int print_pointer(va_list ap, local_buffer *buffer)
 	int len = 0;
 	unsigned long addr = va_arg(ap, unsigned long);
 	
-	if (addr < 1)
+	if (!addr)
 		len += _printf("%s", "(nil)");
 	else
 	{

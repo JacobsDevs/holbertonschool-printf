@@ -17,7 +17,7 @@ Format specifiers implemented
 - Prints non-hidden characters as hexadecimal values (%S)
 - Print pointer address (%p)
 
-##Requirements
+## Requirements
 ***
 - Allowed editors: vi, vim, emacs
 - All code is written in Betty style.
@@ -32,7 +32,7 @@ Authorized functions and macros:
 - ```va_copy (man 3 va_copy)```
 - ```va_arg (man 3 va_arg)```
 
-##Compilation
+## Compilation
 ***
 - All files were compiled on Ubuntu 20.04 lTS gcc version 11.40.
 - All the .c files together with a main.c file are compiled this way:
@@ -61,7 +61,7 @@ Output:
 Hello World, this project is 10 out of 10!
 ```
 
-##Contributors
+## Contributors
 ***
 - Mahsa
 - Max

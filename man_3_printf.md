@@ -8,7 +8,7 @@
   int _printf(const char *format, ...);
 ```
 # Description
-  The function \_printf outputs to the stdout based on what is in the format string.
+  The function \_printf outputs to the stdout based on what is in the format string. To optimize performance, a local buffer of 1024 characters is used, reducing the number of calls to write.
 
   The format string is a collection of characters and specifiers (%\_) that tell
   \_printf how to handle the variadic list of arguments.
@@ -37,6 +37,28 @@ The definition for the conversion specifiers are:
 - If the integer is negative (but not INT_MIN), the '-' is negated and a positive integer is printed.
 
 - If the integer is positive, the digits are printed directly.
+
+%b  Converts an integer to its binary representation and prints it.
+
+
+%S      Prints a string, replacing non-printable characters with their ASCII values in hexadecimal form, 
+    prefixed by "\x". Printable characters are displayed as-is.
+
+%p      Prints a pointer address in hexadecimal format, prefixed with "0x".
+
+
+%x      Prints an unsigned integer in lowercase hexadecimal format.
+
+
+%X      Prints an unsigned integer in uppercase hexadecimal format.
+
+
+%u      Prints an unsigned decimal integer.
+- Negative values are converted to their equivalent unsigned representation.
+
+
+%o  Prints an unsigned integer in octal format.
+
 
 # Return Value
 On success, the functions return the number of bytes printed
@@ -70,4 +92,47 @@ Returns -1 if an error is encountered.
   _printf("Percent sign: %%\n");
 
   Output: "Percent sign: %"
+```
+### Printing a Binary:
+```
+  _printf("Binary, %b\n", 5);
+
+  Output : "Binary: 101"
+```
+### Printing a Custom String:
+```
+  _printf("Custom String: %S\n", "Hello\nWorld");
+
+  Output : "Custom String: Hello\x0AWorld"
+```
+### Printing a Pointer:
+```
+  int num = 42;
+  _printf("Pointer: %p\n", &num);
+
+  Output : "Pointer: 0x7ffeefbff550"
+```
+### Printing Lowercase Hexadecimal:
+```
+  _printf("Hex (lowercase): %x\n", 255);
+
+  Output : "Hex (lowercase): ff"
+```
+### Printing Uppercase Hexadecimal:
+```
+  _printf("Hex (uppercase): %X\n", 255);
+
+  Output : "Hex (uppercase): FF"
+```
+### Printing an Unsigned int:
+```
+  _printf("Unsigned Integer: %u\n", 4294967295);
+
+  Output : "Unsigned Integer: 4294967295"
+```
+### Printing an Octal:
+```
+  _printf("Octal: %o\n", 8);
+
+  Output : "Octal: 10"
 ```

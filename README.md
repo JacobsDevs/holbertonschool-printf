@@ -41,7 +41,7 @@ Authorized functions and macros:
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
 
-##How to use
+## How to use
 ***
 In the main.c file, the printf can be used like this:
 
